@@ -144,7 +144,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'login
         <button type="submit" class="btn btn-primary" style="width:100%;">Sign In</button>
     </form>
     <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--text-muted);">
-        💡 <strong>Hint:</strong> Check the <code>/backup/</code> directory for a database export.
         How are passwords stored? Are they recoverable?
     </p>
 </div>

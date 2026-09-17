@@ -153,7 +153,6 @@ if (isset($_GET['token']) && strlen($_GET['token']) > 0) {
         <p style="font-size:0.85rem; color:var(--accent-emerald); margin-bottom:0.5rem;">✅ Token issued (role: <strong>employee</strong>):</p>
         <div class="terminal-box" style="word-break:break-all;"><?= htmlspecialchars($issuedToken) ?></div>
         <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem;">
-            💡 <strong>Hint:</strong> JWT tokens are just base64url-encoded JSON. Decode the header and payload.
             What algorithm is being used? What happens if you change it to <code>none</code>?
         </p>
     </div>

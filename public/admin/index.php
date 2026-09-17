@@ -108,7 +108,6 @@ $isAuthenticated = isset($_SESSION['admin_auth']) && $_SESSION['admin_auth'] ===
         <button type="submit" class="btn btn-primary" style="width:100%;">Login to Admin Panel</button>
     </form>
     <p style="margin-top:1.25rem;font-size:0.82rem;color:var(--text-muted);">
-        💡 <strong>Hint:</strong> This panel was deployed with factory-default credentials that were never changed.
         What are the most commonly used default admin username/password combinations?
     </p>
 </div>

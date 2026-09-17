@@ -70,7 +70,6 @@ Response (authenticated):
 Response (unauthenticated):
   { "status": "error", "code": 401, "message": "Unauthorized" }
 
-Hint: Where might a developer have accidentally left the token?
     </div>
 </div>
         <?php

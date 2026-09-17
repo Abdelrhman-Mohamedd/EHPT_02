@@ -42,7 +42,6 @@ include('header.php');
         </div>
         <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">
             Legacy SOAP/XML-based API running on an outdated XML parsing library.
-            Known vulnerabilities: CVE-style XXE injection possible.
         </p>
         <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:1rem;">
             Endpoint: <code style="color:var(--accent-rose);">/api/v1/parse.php</code><br>
@@ -55,9 +54,7 @@ include('header.php');
 <div class="card">
     <div class="card-title">📖 Legacy API v1 Documentation</div>
     <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.25rem;">
-        The <code>/api/v1/parse.php</code> endpoint accepts raw XML data via POST and returns
-        parsed results. It uses an <strong>outdated libxml2 configuration</strong> that has
-        external entity processing <strong>enabled by default</strong>.
+        The <code>/api/v1/parse.php</code> endpoint accepts raw XML data via POST and returns parsed results.
     </p>
     <div class="terminal-box">
 # Example request to the legacy XML parser:
@@ -70,18 +67,9 @@ curl -X POST http://vaulttech.local/api/v1/parse.php \
 # Expected response:
 # &lt;response&gt;&lt;status&gt;ok&lt;/status&gt;&lt;parsed&gt;Hello World&lt;/parsed&gt;&lt;/response&gt;
 
-# NOTE: This endpoint uses libxml2 with LIBXML_NOENT enabled — external entities processed!
-# Vulnerable to XXE (XML External Entity) injection.
-# Try injecting: &lt;!DOCTYPE foo [&lt;!ENTITY xxe SYSTEM "file:///etc/passwd"&gt;]&gt;
     </div>
 
-    <div style="margin-top:1.25rem; padding-top:1rem; border-top:1px solid var(--border-color);">
-        <p style="font-size:0.82rem; color:var(--text-muted);">
-            💡 <strong>Hint:</strong> The legacy API was built with an outdated PHP-XML library that has
-            a known XXE vulnerability (A06:2021 — Vulnerable Components). Read sensitive server files
-            by injecting an external entity referencing <code>file:///etc/lab_vulncomp_flag</code>.
-        </p>
-    </div>
+
 </div>
 
 <div class="card" style="margin-top:1.5rem;">
@@ -104,9 +92,9 @@ curl -X POST http://vaulttech.local/api/v1/parse.php \
         <li class="doc-item">
             <div class="doc-info">
                 <span class="doc-icon" style="color:var(--accent-rose);">●</span>
-                <div><strong>/api/v1/parse.php</strong><div style="font-size:0.8rem;color:var(--text-muted);">End-of-life — security patches not applied</div></div>
+                <div><strong>/api/v1/parse.php</strong><div style="font-size:0.8rem;color:var(--text-muted);">End-of-life — Legacy API endpoint</div></div>
             </div>
-            <span style="font-size:0.8rem; color:var(--accent-rose);">Vulnerable</span>
+            <span style="font-size:0.8rem; color:var(--accent-rose);">Deprecated</span>
         </li>
     </ul>
 </div>
