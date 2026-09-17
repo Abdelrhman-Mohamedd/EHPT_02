@@ -120,7 +120,7 @@ if [ "$SETUP_EXIT" -eq 0 ]; then
     zenity --info \
         --title="Lab 02 Ready! 🎉" \
         --width=480 \
-        --text="<b>Your lab environment is ready!</b>\n\n<b>Student ID:</b> ${SID}\n<b>Portal URL:</b> http://${VM_IP}:8082\n\n<small>Alternative: http://vaulttech.local:8082</small>\n\nOpen a browser and navigate to the URL above to begin.\n\nGood luck!" \
+        --text="<b>Your lab environment is ready!</b>\n\n<b>Student ID:</b> ${SID}\n<b>Portal URL:</b> http://${VM_IP}\n\n<small>Alternative: http://vaulttech.local</small>\n\nOpen a browser and navigate to the URL above to begin.\n\nGood luck!" \
         2>/dev/null || true
 else
     SETUP_LOG=$(cat /tmp/lab02_setup.log 2>/dev/null | tail -20 || echo "No log output.")

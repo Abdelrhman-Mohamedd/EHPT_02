@@ -62,7 +62,7 @@ include('header.php');
     <div class="terminal-box">
 # Example request to the legacy XML parser:
 
-curl -X POST http://vaulttech.local:8082/api/v1/parse.php \
+curl -X POST http://vaulttech.local/api/v1/parse.php \
      -H "Content-Type: application/xml" \
      -H "X-API-Key: vaulttech-api-key-2024" \
      -d '&lt;?xml version="1.0"?&gt;&lt;request&gt;&lt;data&gt;Hello World&lt;/data&gt;&lt;/request&gt;'

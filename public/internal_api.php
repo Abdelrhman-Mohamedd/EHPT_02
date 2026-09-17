@@ -12,7 +12,7 @@
  *  1. View page source on any portal page (Ctrl+U) — see <script src="assets/js/portal.js">
  *  2. Open portal.js — find the INTERNAL_API_TOKEN constant with the hardcoded bearer token.
  *  3. Call this endpoint: GET /internal_api.php?token=<value>
- *     OR: curl -H "Authorization: Bearer <token>" http://vaulttech.local:8082/internal_api.php
+ *     OR: curl -H "Authorization: Bearer <token>" http://vaulttech.local/internal_api.php
  *  4. Receive the flag in the JSON response.
  */
 
@@ -62,7 +62,7 @@ Auth     : Authorization: Bearer &lt;INTERNAL_API_TOKEN&gt;
 
 Example (curl):
   curl -H "Authorization: Bearer &lt;token&gt;" \
-       http://vaulttech.local:8082/internal_api.php
+       http://vaulttech.local/internal_api.php
 
 Response (authenticated):
   { "status": "ok", "flag": "FLAG{...}", "message": "..." }
