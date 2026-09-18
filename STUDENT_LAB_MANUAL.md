@@ -16,6 +16,22 @@
 
 ---
 
+## 💻 Prerequisites & Attacker Machine
+
+This lab is a **"Black-Box" network appliance**. You are not provided with a command line or terminal access to the target server.
+
+To successfully complete this lab, you must attack the target VM from a separate **Attacker Machine** connected to the same virtual network. We strongly recommend using **Kali Linux** or **Parrot OS**.
+
+You will need the following tools installed on your attacker machine:
+- A web browser (Firefox / Chrome)
+- A directory enumeration tool (<code>gobuster</code>, <code>dirb</code>, or <code>ffuf</code>)
+- A password hash cracker (<code>hashcat</code> or <code>john the ripper</code>)
+- A wordlist (e.g., <code>rockyou.txt</code> and a standard directory wordlist)
+- An HTTP proxy / request interceptor (<code>Burp Suite Community Edition</code>)
+- Terminal utilities like <code>curl</code> and <code>base64</code>
+
+---
+
 ## 🏢 Scenario
 
 You have been hired as a Penetration Tester by **VaultTech Financial Services** to assess the security of their internal employee portal ahead of a regulatory compliance audit.
